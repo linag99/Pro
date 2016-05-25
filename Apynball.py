@@ -19,8 +19,8 @@ nombre = Button(menu, text = "Player Name:", font = "Algerian", command = mostra
 fondo = PhotoImage(file = "dri.gif")
 canvas2.create_image(0,0, image = fondo)
 salir = Button(menu, text = "End Game", font = "Algerian", command = exit).place(x=20,y=220)
-title = PhotoImage(file = "ab.gif")
-canvas2.create_image(200,330, image = title)
+title = Label(menu, text = "SQUARED PINBALL", font = "Algerian 25", fg = "blue")
+title.place(x=10,y=300)
 
 
 
@@ -28,6 +28,7 @@ canvas2.create_image(200,330, image = title)
 lina = Toplevel(menu)
 c = Canvas(lina,width=400, height = 800)
 c.pack()
+lina.resizable(0,0)
 c.config(bg="LightSteelBlue2")
 lina.title("Pinball Game")
 player = Label(c,text="Name:", fg = "blue", font = "Algerian")
@@ -52,6 +53,12 @@ triangulo2 = {"objeto":c.create_rectangle(320,490,270,440, fill = "lime green")}
 palanca_1 = c.create_polygon(100,570,180,570,100,550, fill = "yellow")
 palanca_2 = c.create_polygon(295,570,215,570,295,550, fill = "yellow")
 center = {"objeto":c.create_rectangle(165,320,205,350, fill = "DarkOrchid3")}
+name = Label(lina, text = "Player Name:", font = "Algerian 15", fg = "blue")
+name.place(x=20,y=600)
+Score = Label(lina, text = "Score:", font = "Algerian 15", fg = "blue")
+Score.place(x=20,y=650)
+Lifes = Label(lina, text = "Lifes:", font = "Algerian 15", fg = "blue")
+Lifes.place(x=20,y=700)
           
 
     
